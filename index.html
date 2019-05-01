@@ -1,52 +1,12 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset='utf-8'>
-    <title>Vue初始化</title>
-    <script src='./vue.js'>
-    </script>
-</head>
-
-<body>
-    <div id='app'>
-        <input type="text" v-model="InputValue" />
-        <button @click="click">提交</button>
-        <ul>
-            <todo-item :content='item' :index='i' v-for="(item,i) in List" @delete='deleteItem'></todo-item>
-        </ul>
-
-        <script>
-            var TodoItem = {
-                props: ['content', 'index'],
-                template: "<li @click='deleteItem'>{{content}}</li>",
-                methods: {
-                    deleteItem: function() {
-                        this.$emit('delete', this.index)
-                    }
-                }
-            }
-            var vm = new Vue({
-                el: '#app',
-                components: {
-                    TodoItem: TodoItem
-                },
-                data: {
-                    InputValue: '',
-                    List: []
-                },
-                methods: {
-                    click: function() {
-                        this.List.push(this.InputValue)
-                        this.InputValue = ''
-                    },
-                    deleteItem: function(index) {
-                        this.List.splice(index, 1)
-                    }
-                }
-            })
-        </script>
-    </div>
-</body>
-
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>gowhere</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
 </html>
