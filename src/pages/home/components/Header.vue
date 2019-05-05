@@ -5,13 +5,16 @@
         </div>
         <div class="header-input">
             <i class="iconfont iconsearch"></i> 输入城市/景点/游玩主题</div>
-        <div class="header-right">城市<i class="iconfont iconarrow"></i></div>
+        <div class="header-right">{{this.city}}<i class="iconfont iconarrow"></i></div>
     </div>
 </template>
 
 <script>
 export default {
-  name: "Header"
+  name: "HomeHeader",
+  props: {
+      city: String
+  }
 };
 </script>
 
