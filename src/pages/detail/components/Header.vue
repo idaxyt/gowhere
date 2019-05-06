@@ -4,7 +4,8 @@
       <router-link tag='div' to='/' class="header-abs" v-show='showAbs'>
         <i class="iconfont iconreturn"></i>
       </router-link>
-      <div class='header-fixed' v-show='!showAbs'>
+      <div class='header-fixed' v-show='!showAbs'
+      :style='opacityStyle'>
         <router-link tag='div' to='/'>
           <div><i class="iconfont iconreturn header-fixed-back"></i></div>
         </router-link>
@@ -20,13 +21,21 @@ export default {
   name: "DetailHeader",
   data() {
     return {
-      showAbs: true
+      showAbs: true,
+      opacityStyle: {
+        opacity: 0
+      }
     }
   },
   methods: {
     handleScroll() {
       const top = document.documentElement.scrollTop
       if(top>60) {
+        let opacity = top/140
+        opacity = opacity>1?1:opacity
+        this.opacityStyle = {
+          opacity
+        }
         this.showAbs = false;
       } else {
         this.showAbs = true;
