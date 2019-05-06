@@ -4,6 +4,9 @@
       <div class="item-title border-bottom">
         <i class="item-title-icon"></i>{{item.title}}
       </div>
+      <div v-if='item.children' class="item-children">
+        <detail-list :list='item.children'></detail-list>
+      </div>
     </div>
   </div>
 </template>
@@ -40,5 +43,7 @@ export default {
 .item-title 
   line-height: .8rem;
   font-size: .3rem;
+  padding: 0 .2rem;
+.item-children
   padding: 0 .2rem;
 </style>
