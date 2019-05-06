@@ -1,22 +1,44 @@
 <template>
-  <div class="banner">
-    <img
-      class="banner-img"
-      src="//img1.qunarzz.com/sight/p0/1703/62/62d2f2a0acff4ea7a3.water.jpg_600x330_83b847dc.jpg"
-      alt
-    >
-    <div class="banner-info">
-      <div class="banner-title">寻龙山龙隐镇</div>
-      <div class="banner-number">
-        <i class="iconfont iconimg"></i>
+  <div>
+    <div class="banner">
+      <img
+        class="banner-img"
+        src="//img1.qunarzz.com/sight/p0/1703/62/62d2f2a0acff4ea7a3.water.jpg_600x330_83b847dc.jpg"
+        alt
+        @click="handleBannerClick"
+      >
+      <div class="banner-info">
+        <div class="banner-title">寻龙山龙隐镇</div>
+        <div class="banner-number">
+          <i class="iconfont iconimg"></i>
+        </div>
       </div>
+      <common-gallary :img="imgs" v-show="showGallary" @close="handleGallaryClose"></common-gallary>
     </div>
   </div>
 </template>
 
 <script>
+import CommonGallary from "common/gallary/Gallary";
 export default {
-  name: "DetailBanner"
+  name: "DetailBanner",
+  data() {
+    return {
+      img: [],
+      showGallary: false
+    };
+  },
+  components: {
+    CommonGallary
+  },
+  methods: {
+    handleBannerClick() {
+      this.showGallary = true;
+    },
+    handleGallaryClose() {
+      this.showGallary = false;
+    }
+  }
 };
 </script>
 
