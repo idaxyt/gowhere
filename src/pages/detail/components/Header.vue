@@ -1,22 +1,19 @@
 <template>
-  <div>
-    <div class="header">
-      <router-link tag='div' to='/' class="header-abs" v-show='showAbs'>
-        <i class="iconfont iconreturn"></i>
+  <div class="header">
+    <router-link tag='div' to='/' class="header-abs" v-show='showAbs'>
+      <i class="iconfont iconreturn"></i>
+    </router-link>
+    <div class='header-fixed' v-show='!showAbs'
+    :style='opacityStyle'>
+      <router-link tag='div' to='/'>
+        <div><i class="iconfont iconreturn header-fixed-back"></i></div>
       </router-link>
-      <div class='header-fixed' v-show='!showAbs'
-      :style='opacityStyle'>
-        <router-link tag='div' to='/'>
-          <div><i class="iconfont iconreturn header-fixed-back"></i></div>
-        </router-link>
-      景点详情
-      </div>
+    景点详情
     </div>
   </div>
 </template>
 
 <script>
-import CommonGallary from "common/gallary/Gallary";
 export default {
   name: "DetailHeader",
   data() {
@@ -44,6 +41,9 @@ export default {
   },
   activated() {
     window.addEventListener('scroll',this.handleScroll)
+  },
+  deactivated() {
+    window.removeEventListener('scroll',this.handleScroll)
   }
 };
 </script>
