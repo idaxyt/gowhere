@@ -24,7 +24,7 @@ export default {
   name: "DetailBanner",
   data() {
     return {
-      img: [],
+      imgs: [],
       showGallary: false
     };
   },
