@@ -22,6 +22,6 @@ export default {
 @import '~styles/varibles.styl';
 
 .content {
-  height: 0.5rem;
+  height: 50rem;
 }
 </style>
