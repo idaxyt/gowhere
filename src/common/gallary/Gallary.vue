@@ -1,8 +1,8 @@
 <template>
   <div class="container" @click="handleGallaryClick">
     <div class="warpper">
-      <swiper :options="swiperOption" v-for="(item,index) in imgs" :key="index">
-        <swiper-slide>
+      <swiper :options="swiperOptions">
+        <swiper-slide v-for="(item,index) in imgs" :key="index">
           <img class="gallary-img" :src="item" alt>
         </swiper-slide>
         <div class="swiper-pagination" slot="pagination"></div>
@@ -24,7 +24,7 @@ export default {
   },
   data() {
     return {
-      swiperOption: {
+      swiperOptions: {
         pagination: ".swiper-pagination",
         // 修改轮播图底部显示样式
         paginationType: "fraction",
@@ -49,7 +49,7 @@ export default {
   overflow: inherit;
 }
 
-.container {
+.container 
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -61,12 +61,10 @@ export default {
   background: #000;
   z-index: 99;
 
-  .wrapper {
-    width: 100%;
-    padding-bottom: 100%;
-    height: 0;
-  }
-}
+.wrapper 
+  width: 100%;
+  padding-bottom: 100%;
+  height: 0;
 
 .gallary-img {
   width: 100%;
