@@ -1,14 +1,14 @@
 <template>
   <div class="header">
-    <router-link tag='div' to='/' class="header-abs" v-show='showAbs'>
+    <router-link tag="div" to="/" class="header-abs" v-show="showAbs">
       <i class="iconfont iconreturn"></i>
     </router-link>
-    <div class='header-fixed' v-show='!showAbs'
-    :style='opacityStyle'>
-      <router-link tag='div' to='/'>
-        <div><i class="iconfont iconreturn header-fixed-back"></i></div>
-      </router-link>
-    景点详情
+    <div class="header-fixed" v-show="!showAbs" :style="opacityStyle">
+      <router-link tag="div" to="/">
+        <div>
+          <i class="iconfont iconreturn header-fixed-back"></i>
+        </div>
+      </router-link>景点详情
     </div>
   </div>
 </template>
@@ -22,17 +22,17 @@ export default {
       opacityStyle: {
         opacity: 0
       }
-    }
+    };
   },
   methods: {
     handleScroll() {
-      const top = document.documentElement.scrollTop
-      if(top>60) {
-        let opacity = top/140
-        opacity = opacity>1?1:opacity
+      const top = document.documentElement.scrollTop;
+      if (top > 60) {
+        let opacity = top / 140;
+        opacity = opacity > 1 ? 1 : opacity;
         this.opacityStyle = {
           opacity
-        }
+        };
         this.showAbs = false;
       } else {
         this.showAbs = true;
@@ -40,10 +40,10 @@ export default {
     }
   },
   activated() {
-    window.addEventListener('scroll',this.handleScroll)
+    window.addEventListener("scroll", this.handleScroll);
   },
   deactivated() {
-    window.removeEventListener('scroll',this.handleScroll)
+    window.removeEventListener("scroll", this.handleScroll);
   }
 };
 </script>
@@ -51,20 +51,24 @@ export default {
 <style lang="stylus" scoped>
 @import '~styles/varibles.styl';
 
-.header-abs 
+.header-abs {
   position: absolute;
   left: 0.2rem;
   top: 0.2rem;
-  width: .8rem;
-  height : .8rem;
-  line-height: .8rem;
+  width: 0.8rem;
+  height: 0.8rem;
+  line-height: 0.8rem;
   text-align: center;
-  border-radius: .4rem;
-  background: rgba(0,0,0,.8)
-.iconreturn 
-  color:#fff;
-  font-size: .4rem;
-.header-fixed 
+  border-radius: 0.4rem;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.iconreturn {
+  color: #fff;
+  font-size: 0.4rem;
+}
+
+.header-fixed {
   z-index: 2;
   position: fixed;
   top: 0;
@@ -75,11 +79,14 @@ export default {
   text-align: center;
   color: #fff;
   background: $bgColor;
-  font-size: .32rem;
-.header-fixed-back 
+  font-size: 0.32rem;
+}
+
+.header-fixed-back {
   position: absolute;
   top: 0;
   left: 0;
-  width: .64rem;
-  text-align: align;
+  width: 0.64rem;
+  text-align: center;
+}
 </style>

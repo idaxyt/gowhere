@@ -22,8 +22,8 @@ export default {
   data() {
     return {
       swiperOption: {
-        autoplay:false
-      },
+        autoplay: false
+      }
     };
   },
   computed: {
@@ -86,7 +86,7 @@ export default {
       right: 0;
       bottom: 0;
       height: 0.44rem;
-      line-heigh: 0.44rem;
+      line-height: 0.44rem;
       color: $darkTextColor;
       text-align: center;
       ellipsis();
