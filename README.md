@@ -36,7 +36,7 @@ yarn run build
 
 * 图片占位，可参考 [巧用margin/padding的百分比值实现高度自适应（多用于占位，避免闪烁）](https://segmentfault.com/a/1190000004231995)
 
-## 4.项目展示
+## 4.项目示例
 
 ---主页1---
 
