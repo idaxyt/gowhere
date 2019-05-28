@@ -33,17 +33,17 @@ yarn run build
 
 ## 4.项目展示
 
-###主页1
-[主页1](https://github.com/idaxyt/gowhere/blob/master/%E4%B8%BB%E9%A1%B5.png)
-###主页2
-[主页2](https://github.com/idaxyt/gowhere/blob/master/%E4%B8%BB%E9%A1%B52.png)
-###景点详情
-[景点详情](https://github.com/idaxyt/gowhere/blob/master/%E6%99%AF%E7%82%B9%E8%AF%A6%E6%83%85.png)
-###景点详情图片预览
-[景点详情图片预览](https://github.com/idaxyt/gowhere/blob/master/%E6%99%AF%E7%82%B9%E8%AF%A6%E6%83%85%E5%9B%BE%E7%89%87%E9%A2%84%E8%A7%88.png)
-###城市选择1
-[城市选择1](https://github.com/idaxyt/gowhere/blob/master/%E5%9F%8E%E5%B8%82%E9%80%89%E6%8B%A91.png)
-###城市选择2
-[城市选择2](https://github.com/idaxyt/gowhere/blob/master/%E5%9F%8E%E5%B8%82%E9%80%89%E6%8B%A92.png)
+---主页1---
+![主页1](https://github.com/idaxyt/gowhere/blob/master/mian1.png)
+---主页2---
+![主页2](https://github.com/idaxyt/gowhere/blob/master/main2.png)
+---景点详情---
+![景点详情](https://github.com/idaxyt/gowhere/blob/master/detail.png)
+---景点详情图片预览---
+![景点详情图片预览](https://github.com/idaxyt/gowhere/blob/master/detailphoto.png)
+---城市选择1---
+![城市选择1](https://github.com/idaxyt/gowhere/blob/master/citychoose1.png)
+---城市选择2---
+![城市选择2](https://github.com/idaxyt/gowhere/blob/master/citychoose2.png)
 
 
